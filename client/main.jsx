@@ -7,6 +7,9 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
 
 
+
+
+
 const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=general';
 const headers = {
   'Authorization': 'apikey 5uKnvUfcA05tIWGMfgBwuz:14MyPyxKJbY3vJANhQB3BG',
@@ -33,7 +36,10 @@ Meteor.startup(() => {
         console.log(TrName, TrDescription,TrDate, TrImage, TrKey, TrSource , TrUrl);
       }
     }
-  });   
+  });  
+  
+
+  
  
 
 const apiUrl2 = 'https://api.collectapi.com/news/getNews?country=de&tag=general';
