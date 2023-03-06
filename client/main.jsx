@@ -30,7 +30,7 @@ Meteor.startup(() => {
         const TrKey = TrApi.key;
         const TrSource = TrApi.source;
         const TrUrl = TrApi.url;
-        console.log(TrName);
+        console.log(TrName, TrDescription,TrDate, TrImage, TrKey, TrSource , TrUrl);
       }
     }
   });   
@@ -57,7 +57,7 @@ const headers2 = {
         const deKey = deApi.key;
         const deSource = deApi.source;
         const deUrl = deApi.url;
-        console.log(deKey);
+        console.log(deName, deDescription, deDate, deImage, deKey, deSource, deUrl);
       }
     }
   });   
@@ -86,7 +86,7 @@ const headers3 = {
         const enKey = enApi.key;
         const enSource = enApi.source;
         const enUrl = enApi.url;
-        console.log(enDate);
+        console.log(enName, enDescription, enDate, enImage, enKey, enSource,enUrl);
       }
     }
   });   
