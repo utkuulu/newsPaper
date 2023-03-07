@@ -10,13 +10,12 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
 
 
-const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=general';
-const headers = {
-  'Authorization': 'apikey 5uKnvUfcA05tIWGMfgBwuz:14MyPyxKJbY3vJANhQB3BG',
-  'Content-Type': 'application/json'
-};
-
 Meteor.startup(() => {  
+  const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=general';
+  const headers = {
+  'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
+  'Content-Type': 'application/json'
+  };
 
   
   HTTP.get(apiUrl, { headers }, (error, response) => {
@@ -40,11 +39,11 @@ Meteor.startup(() => {
   
 
   
- 
+
 
 const apiUrl2 = 'https://api.collectapi.com/news/getNews?country=de&tag=general';
 const headers2 = {
-  'Authorization': 'apikey 5uKnvUfcA05tIWGMfgBwuz:14MyPyxKJbY3vJANhQB3BG',
+  'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
   'Content-Type': 'application/json'
 };
 
@@ -73,7 +72,7 @@ const headers2 = {
 
 const apiUrl3 = 'https://api.collectapi.com/news/getNews?country=en&tag=general';
 const headers3 = {
-  'Authorization': 'apikey 5uKnvUfcA05tIWGMfgBwuz:14MyPyxKJbY3vJANhQB3BG',
+  'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
   'Content-Type': 'application/json'
 };
 
