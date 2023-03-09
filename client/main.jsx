@@ -12,27 +12,27 @@ import './router.js'
 
 
 // TR HABERLERİNİ ALDIĞIM API
-const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=economy';
+const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=general';
 const headers = {
-  'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
+  'Authorization': 'apikey 3cZQv5qxI7RQI4vxDJOWzZ:2aYQVPIlKUTlEFYBlyF2hD',
   'Content-Type': 'application/json'
 };
 
 // DE HABERLERİNİ ALDIĞIM API
 const apiUrl2 = 'https://api.collectapi.com/news/getNews?country=de&tag=general';
 const headers2 = {
-  'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
+  'Authorization': 'apikey 3cZQv5qxI7RQI4vxDJOWzZ:2aYQVPIlKUTlEFYBlyF2hD',
   'Content-Type': 'application/json'
 };
 
 // EN HABERLERİNİ ALDIĞIM API
 const apiUrl3 = 'https://api.collectapi.com/news/getNews?country=en&tag=general';
 const headers3 = {
-  'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
+  'Authorization': 'apikey 3cZQv5qxI7RQI4vxDJOWzZ:2aYQVPIlKUTlEFYBlyF2hD',
   'Content-Type': 'application/json'
 };
 
-// haber bloğunu oluşturduğum kısım -- DÜZENLEME GEREKİYOR TEMAYI BOZDU
+// haber bloğunu oluşturduğum kısım -- DÜZENLEME GEREKİYOR TEMAYI BOZDUm
 
 HTTP.get(apiUrl, { headers }, (error, response) => {
   if (error) {
