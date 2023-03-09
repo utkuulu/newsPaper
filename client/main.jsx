@@ -104,7 +104,7 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
       const TrSource6 = TrApi6.source;
       const TrUrl6 = TrApi6.url;
       
-      newsData1 += `
+      newsData1 += `      // 1.haber card
       
             <div class="card card-shadow">
               <img src="${TrImage}" class="card-img-top" alt="Haber 2">
@@ -122,7 +122,7 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
             </div>
      <br> 
       `;
-      newsData2 += `
+      newsData2 += `     // 2.haber card
       
       <div class="card card-shadow">
         <img src="${TrImage2}" class="card-img-top" alt="Haber 2">
@@ -141,7 +141,7 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
 <br> 
 `;
 
-    newsData3 += `
+    newsData3 += `      // 3.haber card
       
             <div class="card card-shadow">
               <img src="${TrImage3}" class="card-img-top" alt="Haber 2">
@@ -161,7 +161,7 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
       `;
      
 
-      newsData4 += `
+      newsData4 += `  // 4.haber card
       
             <div class="card card-shadow">
               <img src="${TrImage4}" class="card-img-top" alt="Haber 2">
@@ -179,7 +179,7 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
             </div>
      <br> 
       `;
-
+    //EDİTORUN SEÇTİKLERİ KISMI
       editorsPick += `
       
       
