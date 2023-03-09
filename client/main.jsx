@@ -104,7 +104,9 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
       const TrSource6 = TrApi6.source;
       const TrUrl6 = TrApi6.url;
       
-      newsData1 += `      // 1.haber card
+
+ // 1.haber card
+      newsData1 += `     
       
             <div class="card card-shadow">
               <img src="${TrImage}" class="card-img-top" alt="Haber 2">
@@ -122,7 +124,8 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
             </div>
      <br> 
       `;
-      newsData2 += `     // 2.haber card
+ // 2.haber card
+      newsData2 += `    
       
       <div class="card card-shadow">
         <img src="${TrImage2}" class="card-img-top" alt="Haber 2">
@@ -140,8 +143,8 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
       </div>
 <br> 
 `;
-
-    newsData3 += `      // 3.haber card
+// 3.haber card
+    newsData3 += `      
       
             <div class="card card-shadow">
               <img src="${TrImage3}" class="card-img-top" alt="Haber 2">
@@ -160,8 +163,8 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
      <br> 
       `;
      
-
-      newsData4 += `  // 4.haber card
+// 4.haber card
+      newsData4 += `  
       
             <div class="card card-shadow">
               <img src="${TrImage4}" class="card-img-top" alt="Haber 2">
