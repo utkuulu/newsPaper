@@ -3,6 +3,7 @@ import { EJSON } from 'meteor/ejson';
 import { Mongo } from 'meteor/mongo';
 import '@fortawesome/fontawesome-free/js/all.js';
 import { Router } from 'meteor/iron:router';
+import './router.js'
 
 
 
@@ -11,7 +12,7 @@ import { Router } from 'meteor/iron:router';
 
 
 // TR HABERLERİNİ ALDIĞIM API
-const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=general';
+const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=economy';
 const headers = {
   'Authorization': 'apikey 1xIvut2bpgd9lCB2NAjVEt:3VdfMhl4qbHdKCxygBnStO',
   'Content-Type': 'application/json'
@@ -42,6 +43,8 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
     let newsData2 = [];
     let newsData3 = [];
     let newsData4 = [];
+    let editorsPick = [];
+    let editorsPick2 = [];
     
       const TrApi = trNews[1];
       const TrDescription = TrApi.description;
@@ -78,7 +81,24 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
       const TrKey4 = TrApi4.key;
       const TrSource4 = TrApi4.source;
       const TrUrl4 = TrApi4.url;
+
+      const TrApi5 = trNews[5];
+      const TrDescription5 = TrApi5.description;
+      const TrName5 = TrApi5.name;
+      const TrDate5 = TrApi5.date;
+      const TrImage5 = TrApi5.image;
+      const TrKey5 = TrApi5.key;
+      const TrSource5 = TrApi5.source;
+      const TrUrl5 = TrApi5.url;
       
+      const TrApi6 = trNews[6];
+      const TrDescription6 = TrApi6.description;
+      const TrName6 = TrApi6.name;
+      const TrDate6 = TrApi6.date;
+      const TrImage6 = TrApi6.image;
+      const TrKey6 = TrApi6.key;
+      const TrSource6 = TrApi6.source;
+      const TrUrl6 = TrApi6.url;
       
       newsData1 += `
       
@@ -155,11 +175,46 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
             </div>
      <br> 
       `;
+
+      editorsPick += `
+      
+      
+      <div class="row">
+        <div class="col-md-6">
+          <img src="${TrImage5}" alt="Haber 2 Görseli" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <b>${TrName5}</b>
+          <p>${TrDescription5}</p>
+        </div>
+      </div>
+    
+     <br> 
+      `;
+
+      editorsPick2 += `
+      
+      
+      <div class="row">
+        <div class="col-md-6">
+          <img src="${TrImage6}" alt="Haber 2 Görseli" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <b>${TrName6}</b>
+          <p>${TrDescription6}</p>
+        </div>
+      </div>
+    
+     <br> 
+      `;
  
     document.getElementById('news1').innerHTML = newsData1;
     document.getElementById('news2').innerHTML = newsData2;
     document.getElementById('news3').innerHTML = newsData3;
     document.getElementById('news4').innerHTML = newsData4;
+
+    document.getElementById('editorsPick').innerHTML = editorsPick;
+    document.getElementById('editorsPick2').innerHTML = editorsPick2;
     
     
   }
@@ -240,45 +295,6 @@ HTTP.get(apiUrl, { headers }, (error, response) => {
 
 
 ///  EDİTORUN SEÇİMLERİ OLUŞTUR
-
-HTTP.get(apiUrl, { headers }, (error, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    let trNews = response.data.result;
-  
-    for (let i = 4; i < 6; i++) {
-      const TrApi = trNews[i];
-      const TrDescription = TrApi.description;
-      const TrName = TrApi.name;
-      const TrDate = TrApi.date;
-      const TrImage = TrApi.image;
-      const TrKey = TrApi.key;
-      const TrSource = TrApi.source;
-      const TrUrl = TrApi.url;
-      
-      let editorsPick = document.createElement("div");
-      editorsPick.classList.add("news-description");
-      editorsPick.innerHTML = `
-      <div class="col-md-3">
-				<img src="https://via.placeholder.com/326x170" class="img-fluid">
-			</div>
-			<div class="col-md-3 ">
-				<b>Haber Başlığı 2 </b>
-				<p class="news-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nihil ipsum optio saepe veniam accusamus numquam beatae architecto inventore dolore placeat, eveniet hic quis, sequi voluptatum nam. Doloribus, officia ab.</p>
-			</div>
-`;
-
-document.getElementById("editorsPick").appendChild(editorsPick);
-
-      
-     
-    } 
-    //document.getElementById('editorsPick').innerHTML = editorsPick;
-    //document.getElementById('sliderNews').innerHTML = sliderNews;
-    
-  }
-});
 
 
 /*
