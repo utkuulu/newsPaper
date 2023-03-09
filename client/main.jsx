@@ -5,14 +5,18 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import { Router } from 'meteor/iron:router';
 import './router.js'
 
+//url içindeki değişkenleri tanımladık
 
 
+const country = 'tr';
+const tag = 'economy';
+const apiUrl = `https://api.collectapi.com/news/getNews?country=${country}&tag=${tag}`;
 
 
 
 
 // TR HABERLERİNİ ALDIĞIM API
-const apiUrl = 'https://api.collectapi.com/news/getNews?country=tr&tag=general';
+
 const headers = {
   'Authorization': 'apikey 3cZQv5qxI7RQI4vxDJOWzZ:2aYQVPIlKUTlEFYBlyF2hD',
   'Content-Type': 'application/json'
